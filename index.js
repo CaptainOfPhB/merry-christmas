@@ -275,28 +275,28 @@ document.querySelector('button').addEventListener('click', function () {
   animation: blink ease 1s infinite alternate;
 }
 .star.star1 {
-  left: 20px;
+  left: calc(50 - 90px);
   top: 100px;
 }
 .star.star2 {
-  left: 35px;
+  left: calc(50% - 125px);
   top: 320px;
 }
 .star.star3 {
-  left: 50px;
+  left: calc(50% - 80px);
   top: 200px;
 }
 .star.star4 {
-  left: 300px;
+  left: calc(50% + 120px);
   top: 300px;
 }
 .star.star5 {
-  left: 280px;
+  left: calc(50% + 80px);
   top: 200px;
 }
 .star.star6 {
-  left: 300px;
-  top: 100px;
+  left: calc(50% + 100px);
+  top: 130px;
 }
 
 .preview h2 {
