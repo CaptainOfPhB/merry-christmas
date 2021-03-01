@@ -13,6 +13,7 @@
     }
 
     body {
+      height: 100vh;
       position: relative;
     }
 
@@ -46,16 +47,17 @@
     }
 
     .preview {
-      height: 60vh;
+      height: 100vh;
     }
 
     .code-wrapper {
-      height: 40vh;
-      overflow: auto;
-      position: relative;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
       padding: 10px;
+      opacity: 0.7;
     }
-
 
     @keyframes blink {
       from {
@@ -67,14 +69,14 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="./prism.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-coy.min.css">
   <style id="styleTag"></style>
 </head>
 
 <body>
   <div class="mask"><button>请开始你的表演</button></div>
   <div class="preview">
-    <h2>祝你圣诞快乐</h2>
+    <h2 style="padding-top: 50px;">祝你圣诞快乐</h2>
     <div class="santa">
       <div class="hat">
         <div class="hat-top">
@@ -122,8 +124,8 @@
   <div class="code-wrapper">
     <pre id="code"></pre>
   </div>
-  <audio preload loop="loop" id="player" src="./Christmas.mp3"></audio>
-  <script src="./prism.js"></script>
+  <audio preload loop="loop" id="player" src="./merry-hristmas.mp3"></audio>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
   <script src="./index.js"></script>
 </body>
 

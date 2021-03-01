@@ -1,31 +1,33 @@
-document.querySelector('button').addEventListener('click', function () {
-  document.querySelector('.mask').classList.add('hide');
-  var player = document.getElementById('player');
-  player.load();
-  player.play();
-
-  var result = `.preview {
+.preview {
   background: #bcd6d3;
   position: relative;
   color: #d9604b;
   text-align: center;
   display: flex;
+  height: 60vh;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
 }
+
+.preview h2 {
+  margin-top: 10px;
+}
+
 .santa {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: -10px;
 }
+
 .hat {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   text-align: center;
 }
+
 .hat-top {
   position: relative;
   display: inline-block;
@@ -40,6 +42,7 @@ document.querySelector('button').addEventListener('click', function () {
   height: 60px;
   width: 120px;
 }
+
 .ball {
   width: 30px;
   height: 30px;
@@ -50,6 +53,7 @@ document.querySelector('button').addEventListener('click', function () {
   right: -18px;
   top: -18px;
 }
+
 .hat-side {
   width: 140px;
   height: 30px;
@@ -60,6 +64,7 @@ document.querySelector('button').addEventListener('click', function () {
   z-index: 5;
   position: relative;
 }
+
 .face {
   height: 60px;
   width: 120px;
@@ -68,6 +73,7 @@ document.querySelector('button').addEventListener('click', function () {
   position: relative;
   z-index: 2;
 }
+
 .face .eyes {
   display: flex;
   justify-content: space-between;
@@ -75,18 +81,21 @@ document.querySelector('button').addEventListener('click', function () {
   width: 80px;
   margin: 20px auto 0 auto;
 }
+
 .face .eyes .eye {
   width: 12px;
   height: 12px;
   background: #964034;
   border-radius: 6px;
 }
+
 .head {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   margin-top: -5px;
 }
+
 .head .ear {
   position: absolute;
   z-index: 1;
@@ -96,14 +105,17 @@ document.querySelector('button').addEventListener('click', function () {
   border: 5px solid #964034;
   border-radius: 15px;
 }
+
 .head .left-ear {
   top: 10px;
   left: -20px;
 }
+
 .head .right-ear {
   top: 10px;
   right: -20px;
 }
+
 .beard {
   position: absolute;
   width: 140px;
@@ -112,6 +124,7 @@ document.querySelector('button').addEventListener('click', function () {
   z-index: 5;
   padding-top: 10px;
 }
+
 .beard .mouseAndNose {
   position: absolute;
   width: 50px;
@@ -122,6 +135,7 @@ document.querySelector('button').addEventListener('click', function () {
   text-align: center;
   z-index: 5;
 }
+
 .beard .mouseAndNose .nose {
   width: 20px;
   height: 20px;
@@ -131,11 +145,13 @@ document.querySelector('button').addEventListener('click', function () {
   display: inline-block;
   vertical-align: middle;
 }
+
 .beard .mouseAndNose .mouse {
   display: flex;
   justify-content: center;
   margin-top: -2px;
 }
+
 .beard .mouseAndNose .mouse .mouseLeft {
   height: 15px;
   width: 15px;
@@ -143,6 +159,7 @@ document.querySelector('button').addEventListener('click', function () {
   border-right: 5px solid #964034;
   border-bottom: 5px solid #964034;
 }
+
 .beard .mouseAndNose .mouse .mouseRight {
   height: 15px;
   width: 15px;
@@ -150,6 +167,7 @@ document.querySelector('button').addEventListener('click', function () {
   border-left: 5px solid #964034;
   border-bottom: 5px solid #964034;
 }
+
 .beard .beard1 {
   height: 35px;
   position: relative;
@@ -160,6 +178,7 @@ document.querySelector('button').addEventListener('click', function () {
   border-top-right-radius: 25px;
   background: #ffffff;
 }
+
 .beard .beard1:after {
   content: '';
   width: 98px;
@@ -170,6 +189,7 @@ document.querySelector('button').addEventListener('click', function () {
   left: 17px;
   z-index: 5;
 }
+
 .beard .beard2 {
   height: 35px;
   width: 110px;
@@ -183,6 +203,7 @@ document.querySelector('button').addEventListener('click', function () {
   background: #ffffff;
   margin-top: -6px;
 }
+
 .beard .beard2:after {
   content: '';
   width: 56px;
@@ -193,6 +214,7 @@ document.querySelector('button').addEventListener('click', function () {
   left: 22px;
   z-index: 5;
 }
+
 .beard .beard3 {
   height: 35px;
   width: 70px;
@@ -206,29 +228,32 @@ document.querySelector('button').addEventListener('click', function () {
   background: #ffffff;
   margin-top: -6px;
 }
+
 .beard .beard3:after {
   content: '';
-  width: 30px;
+  width: 18px;
   position: absolute;
   bottom: -6px;
   height: 10px;
   background: #ffffff;
-  left: 16px;
+  left: 22px;
   z-index: 5;
 }
+
 .beard .beard4 {
   height: 30px;
-  width: 40px;
+  width: 30px;
   position: relative;
-  margin-left: 50px;
+  margin-left: 55px;
   border: 4px solid #964034;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   background: #ffffff;
   margin-top: -6px;
 }
+
 .clothe {
   background: #d9604b;
   width: 140px;
@@ -236,6 +261,7 @@ document.querySelector('button').addEventListener('click', function () {
   height: 140px;
   position: relative;
 }
+
 .clothe .left-hand {
   position: absolute;
   height: 140px;
@@ -245,6 +271,7 @@ document.querySelector('button').addEventListener('click', function () {
   transform: rotate(12deg);
   left: -15px;
 }
+
 .clothe .right-hand {
   position: absolute;
   height: 140px;
@@ -254,79 +281,56 @@ document.querySelector('button').addEventListener('click', function () {
   transform: rotate(-12deg);
   right: -15px;
 }
+
 .clothe .line {
   height: 60px;
   position: absolute;
   bottom: 0;
 }
+
 .clothe .line1 {
   border-left: 4px solid #964034;
   transform: rotate(-12deg);
   left: 20px;
 }
+
 .clothe .line2 {
   border-right: 4px solid #964034;
   transform: rotate(12deg);
   right: 20px;
 }
+
 .star {
   position: absolute;
-  transform: scale(2);
-  animation: blink ease 1s infinite alternate;
+  font-size: 36px;
 }
+
 .star.star1 {
-  left: calc(50 - 90px);
+  left: 20px;
   top: 100px;
 }
+
 .star.star2 {
-  left: calc(50% - 125px);
+  left: 35px;
   top: 320px;
 }
+
 .star.star3 {
-  left: calc(50% - 80px);
+  left: 50px;
   top: 200px;
 }
+
 .star.star4 {
-  left: calc(50% + 120px);
+  left: 300px;
   top: 300px;
 }
+
 .star.star5 {
-  left: calc(50% + 80px);
+  left: 280px;
   top: 200px;
 }
+
 .star.star6 {
-  left: calc(50% + 100px);
-  top: 130px;
+  left: 300px;
+  top: 100px;
 }
-
-.preview h2 {
-  margin-top: 10px;
-  animation: blink ease 1.2s infinite alternate;
-}
-
-.preview h2, .star {
-  visibility: visible;
-}
-
-`;
-
-  let timeout = 10;
-  let n = 0;
-
-  function ele(selector) {
-    return document.querySelector(selector);
-  }
-  function writeCode(result, timeout) {
-    return setInterval(() => {
-      n += 1;
-      ele('#code').innerHTML = Prism.highlight(result.substring(0, n), Prism.languages.css, 'css');
-
-      ele('#styleTag').innerHTML = result.substring(0, n);
-      ele('.code-wrapper').scrollTop = ele('#code').scrollHeight;
-      if (n >= result.length) {
-        window.clearInterval(timerId);
-      }
-    }, timeout)
-  }
-  var timerId = writeCode(result, timeout);
-});
