@@ -1,4 +1,4 @@
-# merry-christmas
+# Merry Christmas
 
 🎄 We wish you a merry christmas. 🎄
 
